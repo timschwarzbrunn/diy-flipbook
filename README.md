@@ -23,9 +23,9 @@ python src/main.py -f path_to_existing_file.gif
 python src/main.py
 ```
 
-There exist severeal command line arguments (see below) that allow you to customize your recording and the flipbooks size.  
+There exist several command line arguments (see below) that allow you to customize your recording and the flipbooks size.  
 
-The program will generate a flipbook for you in a Word-document so that you will only need to cut the frames out and connect them. 
+The program will generate a flipbook for you in a Word-document so that you will only need to cut the frames out and connect them using a binder clip or something similiar. 
 
 ### Command line arguments
 
