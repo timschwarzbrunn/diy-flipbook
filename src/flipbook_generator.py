@@ -4,7 +4,9 @@ from docx import Document
 from docx.shared import Cm
 
 
-def generate_flipbook(frames, height, left_margin, sheet_margin, filename_flipbook):
+def generate_flipbook(
+    frames, height, left_margin, border_linewidth, sheet_margin, filename_flipbook
+):
     # Note that the frames come in OpenCVs default BGR format.
     print(f"Create flipbook with {len(frames)} frames ...")
     # We create a document and within this document we create a paragraph. Within this paragraph
@@ -39,10 +41,10 @@ def generate_flipbook(frames, height, left_margin, sheet_margin, filename_flipbo
         # Also, add a little border around the sheet so its easier to cut out.
         frame = cv2.copyMakeBorder(
             frame,
-            1,  # top
-            1,  # bottom
-            1,  # left
-            1,  # right
+            border_linewidth,  # top
+            border_linewidth,  # bottom
+            border_linewidth,  # left
+            border_linewidth,  # right
             cv2.BORDER_CONSTANT,
             None,
             [200, 200, 200],

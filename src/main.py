@@ -50,6 +50,7 @@ def main():
                 frames,
                 args.height,
                 args.left_margin,
+                args.border_linewidth,
                 args.sheet_margin,
                 filename_flipbook,
             )
@@ -110,7 +111,7 @@ def main():
                     # Start / stop video recording on SPACE.
                     if gif_frames is None:
                         # Start recording.
-                        print("Started recording.")
+                        print("\nStarted recording.")
                         gif_frames = []
                     else:
                         # Stop recording.

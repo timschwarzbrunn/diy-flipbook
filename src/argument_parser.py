@@ -20,7 +20,7 @@ def get_argument_parser():
         "--fps",
         dest="fps",
         help="the fps to be used for recording (only available in camera mode)",
-        default=10,
+        default=15,
         type=int,
     )
     parser.add_argument(
@@ -34,15 +34,22 @@ def get_argument_parser():
         "--height",
         dest="height",
         help="height of the flipbook in cm",
-        default=3.0,
+        default=3.5,
         type=float,
     )
     parser.add_argument(
         "--left-margin",
         dest="left_margin",
         help="margin to the left of the image in cm that can be used to unite the single paper sheets",
-        default=3.0,
+        default=2.5,
         type=float,
+    )
+    parser.add_argument(
+        "--border-linewidth",
+        dest="border_linewidth",
+        help="linewidth of the border in pixels that gets drawn around the image and the left margin. Increase if the border is not visible on the printed sheets.",
+        default=1,
+        type=int,
     )
     parser.add_argument(
         "--sheet-margin",
