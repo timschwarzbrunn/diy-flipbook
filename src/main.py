@@ -139,6 +139,7 @@ def main():
                             gif_frames,
                             args.height,
                             args.left_margin,
+                            args.border_linewidth,
                             args.sheet_margin,
                             filename_flipbook,
                         )
